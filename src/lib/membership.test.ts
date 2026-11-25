@@ -13,10 +13,18 @@ describe("videoPeople", () => {
       ["elon-musk", "joe-rogan"],
     );
   });
+
+  it("skips an empty person on a company-only video", () => {
+    assert.deepEqual(videoPeople({ person: "" }), []);
+  });
 });
 
 describe("videoHref", () => {
   it("keeps the file the viewer opened", () => {
     assert.equal(videoHref("ycPr5-27vSI", "joe-rogan"), "/v/ycPr5-27vSI?person=joe-rogan");
+  });
+
+  it("keeps a company file shareable", () => {
+    assert.equal(videoHref("8ySMdUIF3cY", { company: "spacex" }), "/v/8ySMdUIF3cY?company=spacex");
   });
 });

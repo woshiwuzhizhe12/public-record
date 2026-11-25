@@ -175,6 +175,7 @@
     },
     {
       "id": "Q4VGQPk2Dl8",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla Unveils Model 3",
       "channel": "Tesla",
@@ -241,6 +242,7 @@
     },
     {
       "id": "5RRmepp7i5g",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla Semi & Roadster Unveil",
       "channel": "Tesla",
@@ -332,6 +334,7 @@
     },
     {
       "id": "Ucp0TTmvqOE",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla Autonomy Day",
       "channel": "Tesla",
@@ -354,6 +357,7 @@
     },
     {
       "id": "sOpMrVnjYeY",
+      "companies": ["spacex"],
       "person": "elon-musk",
       "title": "Starship Update",
       "channel": "SpaceX",
@@ -375,6 +379,7 @@
     },
     {
       "id": "NcROXiN_cdE",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla Cybertruck Unveil",
       "channel": "Tesla",
@@ -413,6 +418,7 @@
     },
     {
       "id": "l6T9xIeZTds",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla Battery Day",
       "channel": "Tesla",
@@ -469,6 +475,7 @@
     },
     {
       "id": "j0z4FweCy4M",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla AI Day 2021",
       "channel": "Tesla",
@@ -694,6 +701,7 @@
     },
     {
       "id": "3N7L8Xhkzqo",
+      "companies": ["spacex"],
       "person": "elon-musk",
       "title": "Starship Update",
       "channel": "SpaceX",
@@ -884,6 +892,7 @@
     },
     {
       "id": "ODSJsviD_SU",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "Tesla AI Day 2022",
       "channel": "Tesla",
@@ -999,6 +1008,7 @@
     },
     {
       "id": "Hl1zEzVUV7w",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "2023 Investor Day | Tesla",
       "channel": "Tesla",
@@ -1544,6 +1554,7 @@
     },
     {
       "id": "VGPlvmMjPtE",
+      "companies": ["tesla"],
       "person": "elon-musk",
       "title": "2025 Annual Shareholder Meeting | Tesla",
       "channel": "Tesla",
@@ -1860,6 +1871,7 @@
     },
     {
       "id": "Z2XlNfCtxwI",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC 2019 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2001,6 +2013,7 @@
     },
     {
       "id": "uPOI4T2SwOo",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA CEO Jensen Huang keynote address at GTC China 2019",
       "channel": "NVIDIA",
@@ -2113,6 +2126,7 @@
     },
     {
       "id": "eAn_oiZwUXA",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC Spring 2021 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2181,6 +2195,7 @@
     },
     {
       "id": "39ubNuxnrK8",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC 2022 Spring Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2249,6 +2264,7 @@
     },
     {
       "id": "PWcNlRI00jo",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC Sept 2022 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2305,6 +2321,7 @@
     },
     {
       "id": "DiGB5uAYKAg",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC 2023 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2357,6 +2374,7 @@
     },
     {
       "id": "Y2F8yisiS6E",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC March 2024 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2380,6 +2398,7 @@
     },
     {
       "id": "_waPvOwL9Z8",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "GTC March 2025 Keynote with NVIDIA CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2492,6 +2511,7 @@
     },
     {
       "id": "lQHK61IDFH4",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA GTC Washington, D.C. Keynote with CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -2641,6 +2661,7 @@
     },
     {
       "id": "jw_o0xr8MWU",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA GTC Keynote 2026",
       "channel": "NVIDIA",
@@ -2826,6 +2847,7 @@
     },
     {
       "id": "wSp6AiNIrsY",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA GTC Taipei 2026 Keynote | Full Replay",
       "channel": "NVIDIA",
@@ -3011,6 +3033,7 @@
     },
     {
       "id": "v-NGxyPjcrE",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA GTC Berlin 2026 Keynote With CEO Jensen Huang",
       "channel": "NVIDIA",
@@ -3034,6 +3057,7 @@
     },
     {
       "id": "pKXDVsWZmUU",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2024",
       "channel": "NVIDIA",
@@ -3056,6 +3080,7 @@
     },
     {
       "id": "TLzna9__DnI",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2025",
       "channel": "NVIDIA",
@@ -3190,6 +3215,7 @@
     },
     {
       "id": "k82RwXqZHY8",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA CEO Jensen Huang Keynote at CES 2025",
       "channel": "NVIDIA",
@@ -3271,6 +3297,7 @@
     },
     {
       "id": "jY28N0kv7Pk",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "SIGGRAPH 2018 - NVIDIA CEO Jensen Huang - Reinventing Computer Graphics",
       "channel": "NVIDIA",
@@ -3358,6 +3385,7 @@
     },
     {
       "id": "Z2VBKerS63A",
+      "companies": ["nvidia"],
       "person": "jensen-huang",
       "title": "NVIDIA Keynote at SIGGRAPH 2023",
       "channel": "NVIDIA",
@@ -45032,6 +45060,7 @@
     },
     {
       "id": "UbfAhFxDomE",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45057,6 +45086,7 @@
     },
     {
       "id": "MCi8jgALPYA",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45082,6 +45112,7 @@
     },
     {
       "id": "bibZyMjY2K4",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45106,6 +45137,7 @@
     },
     {
       "id": "OMxU4BDIm4M",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45130,6 +45162,7 @@
     },
     {
       "id": "WJoaV5NnPtw",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45154,6 +45187,7 @@
     },
     {
       "id": "vJ8aEO6ggOs",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45179,6 +45213,7 @@
     },
     {
       "id": "5dmFa9iXPWI",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45204,6 +45239,7 @@
     },
     {
       "id": "jy0Q75xCwDU",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45228,6 +45264,7 @@
     },
     {
       "id": "gqAYMx34euU",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45252,6 +45289,7 @@
     },
     {
       "id": "19dQ8czJr6A",
+      "companies": ["amd"],
       "person": "lisa-su",
       "people": [
         "lisa-su"
@@ -45395,6 +45433,1687 @@
       "sourceKind": "original",
       "dateNote": null,
       "chapters": [],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "8ySMdUIF3cY",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Starship - Go For Orbit",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2026-11-07",
+      "uploadDate": "2026-11-07",
+      "dateKind": "upload",
+      "year": 2026,
+      "durationSec": 1271,
+      "topics": [
+        "spacex"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Launch and early flight"
+        },
+        {
+          "start": 138,
+          "title": "Orbital flight objectives"
+        },
+        {
+          "start": 255,
+          "title": "Launch commitment and status"
+        },
+        {
+          "start": 324,
+          "title": "Managing the engine anomaly"
+        },
+        {
+          "start": 451,
+          "title": "Successful orbital insertion"
+        },
+        {
+          "start": 557,
+          "title": "Payload deployment success"
+        },
+        {
+          "start": 762,
+          "title": "Contingency planning"
+        },
+        {
+          "start": 884,
+          "title": "Raptor engine development"
+        },
+        {
+          "start": 1060,
+          "title": "De-orbit and return"
+        },
+        {
+          "start": 1201,
+          "title": "Reflecting on mission impact"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "EthkNLasUa8",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Starship - The Holy Grail of Rocketry",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2026-09-18",
+      "uploadDate": "2026-09-18",
+      "dateKind": "upload",
+      "year": 2026,
+      "durationSec": 1710,
+      "topics": [
+        "spacex"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "The journey to reusability"
+        },
+        {
+          "start": 278,
+          "title": "Roots of the program"
+        },
+        {
+          "start": 442,
+          "title": "Lessons from Falcon 9"
+        },
+        {
+          "start": 700,
+          "title": "Ocean recovery mission"
+        },
+        {
+          "start": 966,
+          "title": "Heat shield design"
+        },
+        {
+          "start": 1346,
+          "title": "Inspecting and retrieving"
+        },
+        {
+          "start": 1610,
+          "title": "Data and future steps"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "-a0ecQMq-rM",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Starship - Critical Path",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2026-07-13",
+      "uploadDate": "2026-07-13",
+      "dateKind": "upload",
+      "year": 2026,
+      "durationSec": 2056,
+      "topics": [
+        "spacex"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Launch preparation"
+        },
+        {
+          "start": 182,
+          "title": "Pad systems and testing"
+        },
+        {
+          "start": 353,
+          "title": "Static fire performance"
+        },
+        {
+          "start": 563,
+          "title": "Tower maintenance"
+        },
+        {
+          "start": 827,
+          "title": "Offshore recovery mission"
+        },
+        {
+          "start": 1062,
+          "title": "Payload integration"
+        },
+        {
+          "start": 1289,
+          "title": "Flight abort and resolution"
+        },
+        {
+          "start": 1654,
+          "title": "Successful flight mission"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "ANe_HW4X8oc",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Starship - Test Like You Fly",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2026-04-27",
+      "uploadDate": "2026-04-27",
+      "dateKind": "upload",
+      "year": 2026,
+      "durationSec": 1494,
+      "topics": [
+        "spacex"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Preparing for static fire"
+        },
+        {
+          "start": 148,
+          "title": "Engineering the Starship"
+        },
+        {
+          "start": 379,
+          "title": "Innovations in version three"
+        },
+        {
+          "start": 516,
+          "title": "Reflecting on flight testing"
+        },
+        {
+          "start": 648,
+          "title": "Booster testing and procedures"
+        },
+        {
+          "start": 866,
+          "title": "Developing Raptor 3 engines"
+        },
+        {
+          "start": 1041,
+          "title": "Analyzing the 10-engine test"
+        },
+        {
+          "start": 1138,
+          "title": "The 33-engine static fire"
+        },
+        {
+          "start": 1300,
+          "title": "The path to flight 12"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "5KeIAYTW8eQ",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Crew-7 Mission | Launch",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-08-25",
+      "uploadDate": "2023-08-25",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 5670,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": {
+        "en": "YouTube marks this livestream as 25 August. SpaceX’s description times liftoff as 26 August, 3:27 a.m. ET.",
+        "zh": "YouTube 把这场直播标为 8 月 25 日。SpaceX 简介里的起飞时间是美国东部时间 8 月 26 日凌晨 3:27。"
+      },
+      "chapters": [],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "bEsyo5WLFkQ",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Crew-7 | Approach and Docking",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-08-27",
+      "uploadDate": "2023-08-27",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 8750,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "NIwvwYVUuxg",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "ESA Euclid Mission",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-07-01",
+      "uploadDate": "2023-07-01",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 3786,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Liftoff and landing"
+        },
+        {
+          "start": 217,
+          "title": "Mission overview"
+        },
+        {
+          "start": 359,
+          "title": "Rocket and payload tech"
+        },
+        {
+          "start": 489,
+          "title": "Euclid mission purpose"
+        },
+        {
+          "start": 684,
+          "title": "L2 orbit explained"
+        },
+        {
+          "start": 789,
+          "title": "Final pre-launch prep"
+        },
+        {
+          "start": 1052,
+          "title": "Launch sequence"
+        },
+        {
+          "start": 1283,
+          "title": "Stage separation"
+        },
+        {
+          "start": 1546,
+          "title": "Booster landing"
+        },
+        {
+          "start": 1823,
+          "title": "Coast phase"
+        },
+        {
+          "start": 2236,
+          "title": "Second stage burn"
+        },
+        {
+          "start": 2697,
+          "title": "Payload deployment"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "zO3luySkHQU",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Transporter-8 Mission",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-06-12",
+      "uploadDate": "2023-06-12",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 6036,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 177,
+          "title": "Liftoff and separation"
+        },
+        {
+          "start": 223,
+          "title": "Mission overview"
+        },
+        {
+          "start": 305,
+          "title": "Technical breakdown"
+        },
+        {
+          "start": 379,
+          "title": "Booster landing"
+        },
+        {
+          "start": 4403,
+          "title": "Payload deployment"
+        },
+        {
+          "start": 4927,
+          "title": "Mission completion"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "5ixbPMe6684",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Hughes JUPITER 3 Mission",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-07-28",
+      "uploadDate": "2023-07-28",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 13800,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Mission intro"
+        },
+        {
+          "start": 287,
+          "title": "Launch countdown"
+        },
+        {
+          "start": 453,
+          "title": "Rocket overview"
+        },
+        {
+          "start": 710,
+          "title": "Jupiter 3 satellite"
+        },
+        {
+          "start": 907,
+          "title": "Final countdown"
+        },
+        {
+          "start": 1211,
+          "title": "Liftoff and separation"
+        },
+        {
+          "start": 1443,
+          "title": "Stage separation"
+        },
+        {
+          "start": 1587,
+          "title": "Booster landing"
+        },
+        {
+          "start": 1742,
+          "title": "Coast phase"
+        },
+        {
+          "start": 2947,
+          "title": "Final burn"
+        },
+        {
+          "start": 13372,
+          "title": "Payload deployment"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "XV2tyCEBctA",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Intelsat G-37 Mission",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-08-02",
+      "uploadDate": "2023-08-02",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 3096,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Countdown and launch"
+        },
+        {
+          "start": 267,
+          "title": "Mission overview"
+        },
+        {
+          "start": 509,
+          "title": "Rocket and payload details"
+        },
+        {
+          "start": 736,
+          "title": "Final countdown"
+        },
+        {
+          "start": 1055,
+          "title": "Liftoff and separation"
+        },
+        {
+          "start": 1214,
+          "title": "Booster landing"
+        },
+        {
+          "start": 1592,
+          "title": "Coast phase"
+        },
+        {
+          "start": 2602,
+          "title": "Second stage burn"
+        },
+        {
+          "start": 2775,
+          "title": "Payload deployment"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "Iz6qdzVCN9g",
+      "person": "",
+      "companies": [
+        "spacex"
+      ],
+      "title": "Crew-6 Mission | Undocking",
+      "channel": "SpaceX",
+      "channelUrl": "https://www.youtube.com/@SpaceX",
+      "platform": "youtube",
+      "date": "2023-09-03",
+      "uploadDate": "2023-09-03",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 2265,
+      "topics": [
+        "spacex"
+      ],
+      "format": "launch",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Mission introduction"
+        },
+        {
+          "start": 172,
+          "title": "Departure overview"
+        },
+        {
+          "start": 350,
+          "title": "Station preparations"
+        },
+        {
+          "start": 471,
+          "title": "Undocking commands"
+        },
+        {
+          "start": 638,
+          "title": "Meet the crew"
+        },
+        {
+          "start": 857,
+          "title": "Final farewell"
+        },
+        {
+          "start": 1032,
+          "title": "Physical separation"
+        },
+        {
+          "start": 1417,
+          "title": "Initial departure burns"
+        },
+        {
+          "start": 1660,
+          "title": "Leaving the station zone"
+        },
+        {
+          "start": 2152,
+          "title": "Journey to Earth"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "39BalPDuTo0",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event September 9 2026: Introducing iPhone Duo and more",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2026-09-09",
+      "uploadDate": "2026-09-09",
+      "dateKind": "stream",
+      "year": 2026,
+      "durationSec": 4638,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 396,
+          "title": "iPhone 18 Pro"
+        },
+        {
+          "start": 1814,
+          "title": "AirPods 5"
+        },
+        {
+          "start": 2145,
+          "title": "Apple Watch"
+        },
+        {
+          "start": 3159,
+          "title": "iPhone Duo"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "hF8swzNR1-o",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple WWDC 2026 June 8: Introducing Siri AI and more",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2026-06-08",
+      "uploadDate": "2026-06-08",
+      "dateKind": "stream",
+      "year": 2026,
+      "durationSec": 4574,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 304,
+          "title": "Platform improvements"
+        },
+        {
+          "start": 1016,
+          "title": "Trust and safety"
+        },
+        {
+          "start": 1673,
+          "title": "Apple Intelligence and Siri"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "H3KnMyojEQU",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — September 9, 2025",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2025-09-09",
+      "uploadDate": "2025-09-09",
+      "dateKind": "stream",
+      "year": 2025,
+      "durationSec": 4317,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 179,
+          "title": "AirPods Pro 3"
+        },
+        {
+          "start": 787,
+          "title": "Apple Watch Introduction"
+        },
+        {
+          "start": 1052,
+          "title": "Apple Watch Series 11"
+        },
+        {
+          "start": 1385,
+          "title": "Apple Watch SE 3"
+        },
+        {
+          "start": 1535,
+          "title": "Apple Watch Ultra 3"
+        },
+        {
+          "start": 1783,
+          "title": "iPhone 17"
+        },
+        {
+          "start": 2437,
+          "title": "iPhone Air"
+        },
+        {
+          "start": 3255,
+          "title": "iPhone 17 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "0_DjDdfqtUE",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2025 — June 9 | Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2025-06-09",
+      "uploadDate": "2025-06-09",
+      "dateKind": "stream",
+      "year": 2025,
+      "durationSec": 5546,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 228,
+          "title": "iOS"
+        },
+        {
+          "start": 2495,
+          "title": "watchOS"
+        },
+        {
+          "start": 2928,
+          "title": "tvOS"
+        },
+        {
+          "start": 3215,
+          "title": "macOS"
+        },
+        {
+          "start": 3983,
+          "title": "visionOS"
+        },
+        {
+          "start": 4457,
+          "title": "iPadOS"
+        },
+        {
+          "start": 5165,
+          "title": "Developers"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "uarNiSl_uh4",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — September 9, 2024",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2024-09-09",
+      "uploadDate": "2024-09-09",
+      "dateKind": "stream",
+      "year": 2024,
+      "durationSec": 5930,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 274,
+          "title": "Apple Watch Series 10"
+        },
+        {
+          "start": 1220,
+          "title": "Apple Watch Ultra 2"
+        },
+        {
+          "start": 1560,
+          "title": "AirPods"
+        },
+        {
+          "start": 2393,
+          "title": "iPhone 16"
+        },
+        {
+          "start": 4302,
+          "title": "iPhone 16 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "RXeOiIDNNek",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2024 — June 10 | Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2024-06-10",
+      "uploadDate": "2024-06-10",
+      "dateKind": "stream",
+      "year": 2024,
+      "durationSec": 6217,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Start"
+        },
+        {
+          "start": 89,
+          "title": "Introduction"
+        },
+        {
+          "start": 342,
+          "title": "visionOS"
+        },
+        {
+          "start": 869,
+          "title": "iOS"
+        },
+        {
+          "start": 1844,
+          "title": "Audio & Home"
+        },
+        {
+          "start": 2156,
+          "title": "watchOS"
+        },
+        {
+          "start": 2584,
+          "title": "iPadOS"
+        },
+        {
+          "start": 3052,
+          "title": "macOS"
+        },
+        {
+          "start": 3870,
+          "title": "Apple Intelligence"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "f1J38FlDKxo",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — May 7, 2024",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2024-05-07",
+      "uploadDate": "2024-05-07",
+      "dateKind": "stream",
+      "year": 2024,
+      "durationSec": 2312,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 239,
+          "title": "iPad Air"
+        },
+        {
+          "start": 627,
+          "title": "iPad Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "ctkW3V0Mh-k",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — October 30, 2023",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2023-10-30",
+      "uploadDate": "2023-10-30",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 1832,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 230,
+          "title": "M3, M3 Pro, M3 Max"
+        },
+        {
+          "start": 716,
+          "title": "MacBook Pro"
+        },
+        {
+          "start": 1500,
+          "title": "iMac"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "ZiP1l7jlIIA",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event  — September 12, 2023",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2023-09-12",
+      "uploadDate": "2023-09-12",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 4976,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 462,
+          "title": "Apple Watch Series 9"
+        },
+        {
+          "start": 1680,
+          "title": "Apple Watch Ultra 2"
+        },
+        {
+          "start": 2044,
+          "title": "iPhone 15"
+        },
+        {
+          "start": 3243,
+          "title": "iPhone 15 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "GYkq9Rgoj8E",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2023 — June 5 | Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2023-06-05",
+      "uploadDate": "2023-06-05",
+      "dateKind": "stream",
+      "year": 2023,
+      "durationSec": 7571,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 189,
+          "title": "Mac"
+        },
+        {
+          "start": 1009,
+          "title": "iOS"
+        },
+        {
+          "start": 2074,
+          "title": "iPadOS"
+        },
+        {
+          "start": 2594,
+          "title": "macOS"
+        },
+        {
+          "start": 3422,
+          "title": "Audio & Home"
+        },
+        {
+          "start": 3890,
+          "title": "watchOS"
+        },
+        {
+          "start": 4848,
+          "title": "Apple Vision Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "ux6zXguiqxM",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — September 7, 2022",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2022-09-07",
+      "uploadDate": "2022-09-07",
+      "dateKind": "stream",
+      "year": 2022,
+      "durationSec": 5699,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 400,
+          "title": "Apple Watch Series 8"
+        },
+        {
+          "start": 1217,
+          "title": "Apple Watch SE"
+        },
+        {
+          "start": 1381,
+          "title": "Apple Watch Ultra"
+        },
+        {
+          "start": 2418,
+          "title": "AirPods Pro"
+        },
+        {
+          "start": 2891,
+          "title": "iPhone 14"
+        },
+        {
+          "start": 4167,
+          "title": "iPhone 14 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "q5D55G7Ejs8",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2022 - June 6 | Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2022-06-06",
+      "uploadDate": "2022-06-06",
+      "dateKind": "stream",
+      "year": 2022,
+      "durationSec": 6533,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 210,
+          "title": "iOS"
+        },
+        {
+          "start": 2023,
+          "title": "Ecosystem"
+        },
+        {
+          "start": 2544,
+          "title": "watchOS"
+        },
+        {
+          "start": 2965,
+          "title": "Health"
+        },
+        {
+          "start": 3289,
+          "title": "Mac"
+        },
+        {
+          "start": 4215,
+          "title": "macOS"
+        },
+        {
+          "start": 5375,
+          "title": "iPadOS"
+        },
+        {
+          "start": 6300,
+          "title": "Outro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "CUwg_JoNHpo",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — March 8, 2022",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2022-03-08",
+      "uploadDate": "2022-03-08",
+      "dateKind": "stream",
+      "year": 2022,
+      "durationSec": 3527,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 339,
+          "title": "iPhone"
+        },
+        {
+          "start": 891,
+          "title": "iPad Air"
+        },
+        {
+          "start": 1411,
+          "title": "M1 Ultra"
+        },
+        {
+          "start": 2083,
+          "title": "Mac Studio"
+        },
+        {
+          "start": 2821,
+          "title": "Studio Display"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "exM1uajp--A",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — October 18, 2021",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2021-10-18",
+      "uploadDate": "2021-10-18",
+      "dateKind": "stream",
+      "year": 2021,
+      "durationSec": 3018,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 128,
+          "title": "Apple Music"
+        },
+        {
+          "start": 351,
+          "title": "HomePod mini"
+        },
+        {
+          "start": 531,
+          "title": "AirPods"
+        },
+        {
+          "start": 850,
+          "title": "M1 Pro & M1 Max"
+        },
+        {
+          "start": 1427,
+          "title": "macOS"
+        },
+        {
+          "start": 1802,
+          "title": "MacBook Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "EvGOlAkLSLw",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — September 14, 2021",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2021-09-14",
+      "uploadDate": "2021-09-14",
+      "dateKind": "stream",
+      "year": 2021,
+      "durationSec": 4727,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 309,
+          "title": "iPad"
+        },
+        {
+          "start": 705,
+          "title": "iPad mini"
+        },
+        {
+          "start": 1279,
+          "title": "Apple Watch"
+        },
+        {
+          "start": 1838,
+          "title": "Apple Fitness"
+        },
+        {
+          "start": 2261,
+          "title": "iPhone 13"
+        },
+        {
+          "start": 3427,
+          "title": "iPhone 13 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "0TD96VTf0Xs",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2021 — June 7 | Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2021-06-07",
+      "uploadDate": "2021-06-07",
+      "dateKind": "stream",
+      "year": 2021,
+      "durationSec": 6409,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 317,
+          "title": "iOS"
+        },
+        {
+          "start": 2062,
+          "title": "AirPods"
+        },
+        {
+          "start": 2258,
+          "title": "iPadOS"
+        },
+        {
+          "start": 2919,
+          "title": "Privacy"
+        },
+        {
+          "start": 3193,
+          "title": "iCloud"
+        },
+        {
+          "start": 3425,
+          "title": "Health"
+        },
+        {
+          "start": 4036,
+          "title": "watchOS"
+        },
+        {
+          "start": 4452,
+          "title": "Home"
+        },
+        {
+          "start": 4792,
+          "title": "macOS"
+        },
+        {
+          "start": 5598,
+          "title": "Developer Technologies and App Store"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "JdBYVNuky1M",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — April 20, 2021",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2021-04-20",
+      "uploadDate": "2021-04-20",
+      "dateKind": "stream",
+      "year": 2021,
+      "durationSec": 3663,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 291,
+          "title": "iPhone 12"
+        },
+        {
+          "start": 366,
+          "title": "AirTag"
+        },
+        {
+          "start": 636,
+          "title": "Apple TV"
+        },
+        {
+          "start": 1101,
+          "title": "iMac"
+        },
+        {
+          "start": 2194,
+          "title": "iPad Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "5AwdkGKmZ0I",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — November 10, 2020",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2020-11-10",
+      "uploadDate": "2020-11-10",
+      "dateKind": "stream",
+      "year": 2020,
+      "durationSec": 2940,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 279,
+          "title": "Apple Silicon"
+        },
+        {
+          "start": 840,
+          "title": "macOS Big Sur"
+        },
+        {
+          "start": 1365,
+          "title": "MacBook Air"
+        },
+        {
+          "start": 1790,
+          "title": "Mac Mini"
+        },
+        {
+          "start": 2106,
+          "title": "MacBook Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "KR0g-1hnQPA",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — October 13, 2020",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2020-10-13",
+      "uploadDate": "2020-10-13",
+      "dateKind": "stream",
+      "year": 2020,
+      "durationSec": 4259,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 119,
+          "title": "HomePod Mini"
+        },
+        {
+          "start": 780,
+          "title": "iPhone 12"
+        },
+        {
+          "start": 2724,
+          "title": "iPhone 12 Pro"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "b13xnFp_LJs",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "Apple Event — September 15, 2020",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2020-09-15",
+      "uploadDate": "2020-09-15",
+      "dateKind": "stream",
+      "year": 2020,
+      "durationSec": 3853,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 135,
+          "title": "Apple WATCH"
+        },
+        {
+          "start": 1722,
+          "title": "Apple Fitness"
+        },
+        {
+          "start": 2188,
+          "title": "Apple One"
+        },
+        {
+          "start": 2306,
+          "title": "iPad"
+        }
+      ],
+      "verifiedOn": "2026-11-25"
+    },
+    {
+      "id": "GEZhD3J89ZE",
+      "person": "",
+      "companies": [
+        "apple"
+      ],
+      "title": "WWDC 2020 Special Event Keynote —  Apple",
+      "channel": "Apple",
+      "channelUrl": "https://www.youtube.com/@Apple",
+      "platform": "youtube",
+      "date": "2020-06-22",
+      "uploadDate": "2020-06-22",
+      "dateKind": "stream",
+      "year": 2020,
+      "durationSec": 6532,
+      "topics": [
+        "apple"
+      ],
+      "format": "keynote",
+      "sourceKind": "original",
+      "dateNote": null,
+      "chapters": [
+        {
+          "start": 0,
+          "title": "Introduction"
+        },
+        {
+          "start": 333,
+          "title": "iOS"
+        },
+        {
+          "start": 1915,
+          "title": "iPadOS"
+        },
+        {
+          "start": 2713,
+          "title": "watchOS"
+        },
+        {
+          "start": 3314,
+          "title": "Privacy"
+        },
+        {
+          "start": 3813,
+          "title": "tvOS"
+        },
+        {
+          "start": 4080,
+          "title": "macOS"
+        },
+        {
+          "start": 5157,
+          "title": "Mac"
+        }
+      ],
       "verifiedOn": "2026-11-25"
     }
   ]

@@ -9,6 +9,8 @@ const copy = {
   en: {
     wordmark: "不破不立",
     unofficial: "Unofficial",
+    people: "People",
+    companies: "Companies",
     videos: "Videos",
     personSwitch: "Person",
     timeline: "Timeline",
@@ -107,13 +109,14 @@ const copy = {
       podcast: "Podcast",
       conference: "Conference & forum",
       keynote: "Keynote & presentation",
+      launch: "Launch",
       earnings: "Earnings & meetings",
       "white-house": "White House",
       tv: "TV appearance",
     } as Record<string, string>,
     aboutTitle: "About",
     aboutIntro:
-      "不破不立 is an unofficial index of public appearances. The open files follow Elon Musk, Jensen Huang, Joe Rogan, Steve Jobs, and Lisa Su. Rogan's file is the full-length Joe Rogan Experience and JRE MMA shows posted on his official YouTube channel. Episodes with Musk or Huang also stay on the guest's file.",
+      "不破不立 is an unofficial index of public appearances. The open files follow Elon Musk, Jensen Huang, Joe Rogan, Steve Jobs, and Lisa Su. Rogan's file is the full-length Joe Rogan Experience and JRE MMA shows posted on his official YouTube channel. Episodes with Musk or Huang also stay on the guest's file. Company files are separate and list official uploads from that company's own channel. The first companies are SpaceX, Tesla, NVIDIA, AMD, and Apple.",
     aboutSections: [
       {
         title: "How it is built",
@@ -151,6 +154,8 @@ const copy = {
   zh: {
     wordmark: "不破不立",
     unofficial: "非官方",
+    people: "人物",
+    companies: "公司",
     videos: "视频",
     personSwitch: "人物",
     timeline: "时间线",
@@ -248,13 +253,14 @@ const copy = {
       podcast: "播客",
       conference: "会议与论坛",
       keynote: "主题演讲",
+      launch: "发射",
       earnings: "财报与股东会",
       "white-house": "白宫",
       tv: "电视出演",
     } as Record<string, string>,
     aboutTitle: "关于",
     aboutIntro:
-      "不破不立是一份非官方的公开出场索引。目前的档案跟随埃隆·马斯克、黄仁勋、乔·罗根、乔布斯和苏姿丰。乔·罗根这份收录他官方 YouTube 频道上的完整 Joe Rogan Experience 和 JRE MMA 节目。与马斯克或黄仁勋的那几期，也仍留在嘉宾自己的档案里。",
+      "不破不立是一份非官方的公开出场索引。目前的档案跟随埃隆·马斯克、黄仁勋、乔·罗根、乔布斯和苏姿丰。乔·罗根这份收录他官方 YouTube 频道上的完整 Joe Rogan Experience 和 JRE MMA 节目。与马斯克或黄仁勋的那几期，也仍留在嘉宾自己的档案里。公司档案是分开的，只收录该公司自己频道上的官方上传。最先列入的是太空探索技术公司、特斯拉、英伟达、超威和苹果。",
     aboutSections: [
       {
         title: "如何做成",

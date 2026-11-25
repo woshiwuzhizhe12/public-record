@@ -12,7 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { getVideo, personFromQuery, personHome, personTimeline } from "@/data/catalogue";
+import { getVideo, scopeFromLocation, scopeHome, scopeTimeline } from "@/data/catalogue";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { useTheme } from "@/components/providers";
 import { cn } from "cn";
@@ -32,13 +32,11 @@ function HeaderBar() {
   const { theme, setTheme } = useTheme();
   const videoId = pathname.startsWith("/v/") ? pathname.split("/")[2] : undefined;
   const record = videoId ? getVideo(videoId) : undefined;
-  const requested = search.get("person");
-  const slug = record
-    ? requested && record.people.includes(requested)
-      ? requested
-      : record.person
-    : requested;
-  const person = personFromQuery(slug);
+  const scope = scopeFromLocation({
+    person: search.get("person"),
+    company: search.get("company"),
+    video: record,
+  });
   const onVideos = pathname === "/" || pathname.startsWith("/v/");
   const onTimeline = pathname.startsWith("/timeline");
   const onAbout = pathname.startsWith("/about");
@@ -46,7 +44,7 @@ function HeaderBar() {
   return (
     <header className="border-b border-border">
       <div className="mx-auto flex max-w-[1120px] flex-wrap items-center gap-x-6 gap-y-3 px-5 py-3 sm:px-8">
-        <Link href={personHome(person.slug)} className="flex items-center gap-2.5 text-foreground">
+        <Link href={scopeHome(scope)} className="flex items-center gap-2.5 text-foreground">
           <Mark />
           <span className="leading-none">
             <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground">
@@ -56,10 +54,10 @@ function HeaderBar() {
           </span>
         </Link>
         <nav className="order-3 flex w-full flex-wrap gap-x-5 gap-y-1 text-sm lg:order-none lg:w-auto">
-          <NavLink href={personHome(person.slug)} active={onVideos}>
+          <NavLink href={scopeHome(scope)} active={onVideos}>
             {t.videos}
           </NavLink>
-          <NavLink href={personTimeline(person.slug)} active={onTimeline}>
+          <NavLink href={scopeTimeline(scope)} active={onTimeline}>
             {t.timeline}
           </NavLink>
           <NavLink href="/about" active={onAbout}>

@@ -7,15 +7,19 @@ import { ArrowLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { BilibiliPlayer, Player, type PlayerHandle } from "@/components/player";
 import { VideoCard } from "@/components/video-card";
-import { bilibiliSpace, bilibiliUrl, personHome, relatedVideos, type Video } from "@/data/catalogue";
+import { bilibiliSpace, bilibiliUrl, relatedVideos, scopeFromLocation, scopeHome, type Video } from "@/data/catalogue";
 import { formatDate, formatDuration } from "@/lib/format";
 import { dateKindLabel, labelForTag, useI18n } from "@/lib/i18n";
 
 export function VideoScreen({ video }: { video: Video }) {
   const { lang, t } = useI18n();
-  const requested = useSearchParams().get("person");
-  const context = requested && video.people.includes(requested) ? requested : video.person;
-  const related = useMemo(() => relatedVideos(video, 3, context), [video, context]);
+  const search = useSearchParams();
+  const scope = scopeFromLocation({ person: search.get("person"), company: search.get("company"), video });
+  const scopeKey = scope.kind === "company" ? scope.company.slug : scope.person.slug;
+  const related = useMemo(
+    () => (scope.kind === "company" ? relatedVideos(video, 3, undefined, scope.company.slug) : relatedVideos(video, 3, scope.person.slug)),
+    [video, scope.kind, scopeKey],
+  );
   const playerRef = useRef<PlayerHandle>(null);
   const [time, setTime] = useState(0);
   const [chapterQuery, setChapterQuery] = useState("");
@@ -51,7 +55,7 @@ export function VideoScreen({ video }: { video: Video }) {
 
   return (
     <article className="mx-auto max-w-[1120px] px-5 py-6 sm:px-8 sm:py-8">
-      <Link href={personHome(context)} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
+      <Link href={scopeHome(scope)} className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground">
         <ArrowLeft className="size-4" />
         {t.allVideos}
       </Link>
@@ -161,7 +165,7 @@ export function VideoScreen({ video }: { video: Video }) {
                 .map((tag) => (
                   <Link
                     key={tag}
-                    href={`${personHome(context)}&tags=${encodeURIComponent(tag)}`}
+                    href={`${scopeHome(scope)}&tags=${encodeURIComponent(tag)}`}
                     className="rounded-full border border-border px-3 py-1 text-sm hover:bg-muted"
                   >
                     {labelForTag(tag, t)}
@@ -200,7 +204,12 @@ export function VideoScreen({ video }: { video: Video }) {
           <h2 className="text-2xl font-black tracking-[-0.03em]">{t.moreLike}</h2>
           <div className="mt-5 grid grid-cols-1 gap-x-5 gap-y-8 md:grid-cols-3">
             {related.map((item) => (
-              <VideoCard key={item.id} video={item} person={context} />
+              <VideoCard
+                key={item.id}
+                video={item}
+                person={scope.kind === "person" ? scope.person.slug : undefined}
+                company={scope.kind === "company" ? scope.company.slug : undefined}
+              />
             ))}
           </div>
         </section>

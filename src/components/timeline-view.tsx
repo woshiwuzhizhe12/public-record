@@ -3,8 +3,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { personFromQuery, videosFor } from "@/data/catalogue";
-import { videoHref } from "@/lib/membership";
+import { scopeFromLocation, scopeVideoHref, videosFor, videosForCompany } from "@/data/catalogue";
 import { formatDate, formatDuration } from "@/lib/format";
 import { useI18n } from "@/lib/i18n";
 
@@ -18,8 +17,9 @@ export function TimelineView() {
 
 function TimelineBody() {
   const { lang, t } = useI18n();
-  const person = personFromQuery(useSearchParams().get("person"));
-  const list = videosFor(person.slug);
+  const search = useSearchParams();
+  const scope = scopeFromLocation({ person: search.get("person"), company: search.get("company") });
+  const list = scope.kind === "company" ? videosForCompany(scope.company.slug) : videosFor(scope.person.slug);
   const years = [...new Set(list.map((video) => video.year))].sort((a, b) => b - a);
 
   return (
@@ -38,7 +38,7 @@ function TimelineBody() {
               <ul className="mt-3 divide-y divide-border border-y border-border">
                 {rows.map((video) => (
                   <li key={video.id}>
-                    <Link href={videoHref(video.id, person.slug)} className="grid gap-1 py-3 sm:grid-cols-[140px_120px_minmax(0,1fr)_72px] sm:items-baseline sm:gap-4">
+                    <Link href={scopeVideoHref(video.id, scope)} className="grid gap-1 py-3 sm:grid-cols-[140px_120px_minmax(0,1fr)_72px] sm:items-baseline sm:gap-4">
                       <span className="text-sm text-muted-foreground">
                         {video.dateApproximate ? "≈ " : ""}
                         {formatDate(video.date, lang)}

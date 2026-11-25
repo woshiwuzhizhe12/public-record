@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { PersonRail } from "@/components/person-rail";
+import { ScopeSwitch } from "@/components/scope-switch";
 import { Providers } from "@/components/providers";
 import "./globals.css";
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         </Script>
         <Providers>
           <div className="h-[3px] w-full bg-coral" />
+          <ScopeSwitch />
           <div className="flex min-h-0 flex-1 flex-col md:flex-row">
             <PersonRail />
             <div className="flex min-w-0 flex-1 flex-col">

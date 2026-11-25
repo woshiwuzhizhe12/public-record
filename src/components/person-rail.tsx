@@ -3,7 +3,7 @@
 import { Suspense, useMemo, useState } from "react";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { activePeople, getVideo, personFromQuery, personHome, type Person } from "@/data/catalogue";
+import { activeCompanies, activePeople, companyHome, getVideo, personHome, scopeFromLocation, type BrowseScope } from "@/data/catalogue";
 import { portraits } from "@/data/portraits";
 import { useI18n, type Lang } from "@/lib/i18n";
 import { cn } from "cn";
@@ -16,6 +16,14 @@ export function PersonRail() {
   );
 }
 
+type RailEntry = {
+  slug: string;
+  label: string;
+  letter: string;
+  mark: string;
+  portrait?: string;
+};
+
 function PersonRailBody() {
   const pathname = usePathname();
   const search = useSearchParams();
@@ -23,34 +31,33 @@ function PersonRailBody() {
   const { lang, t } = useI18n();
   const videoId = pathname.startsWith("/v/") ? pathname.split("/")[2] : undefined;
   const record = videoId ? getVideo(videoId) : undefined;
-  const requested = search.get("person");
-  const slug = record
-    ? requested && record.people.includes(requested)
-      ? requested
-      : record.person
-    : requested;
-  const current = personFromQuery(slug);
-  const people = activePeople();
+  const scope = scopeFromLocation({
+    person: search.get("person"),
+    company: search.get("company"),
+    video: record,
+  });
   const [pinned, setPinned] = useState<string | null | undefined>(undefined);
+  const entries = useMemo(() => entriesFor(scope, lang), [scope, lang]);
+  const currentSlug = scope.kind === "company" ? scope.company.slug : scope.person.slug;
 
   const groups = useMemo(() => {
-    const map = new Map<string, Person[]>();
-    for (const person of people) {
-      const letter = (lang === "zh" ? person.letter.zh : person.letter.en).toUpperCase();
-      const list = map.get(letter) ?? [];
-      list.push(person);
-      map.set(letter, list);
+    const map = new Map<string, RailEntry[]>();
+    for (const entry of entries) {
+      const list = map.get(entry.letter) ?? [];
+      list.push(entry);
+      map.set(entry.letter, list);
     }
     return [...map.entries()].sort(([a], [b]) => a.localeCompare(b));
-  }, [lang, people]);
+  }, [entries]);
 
-  const currentLetter = (lang === "zh" ? current.letter.zh : current.letter.en).toUpperCase();
+  const current = entries.find((entry) => entry.slug === currentSlug) ?? entries[0];
+  const currentLetter = current?.letter ?? "";
   const shownLetter =
     pinned && groups.some(([letter]) => letter === pinned) ? pinned : pinned === null ? null : currentLetter;
-  const shownPeople = groups.find(([letter]) => letter === shownLetter)?.[1] ?? [];
+  const shown = groups.find(([letter]) => letter === shownLetter)?.[1] ?? [];
 
   return (
-    <aside aria-label={t.personSwitch} className="sticky top-0 z-20 flex max-h-[40vh] shrink-0 flex-col border-b border-border bg-background md:h-screen md:max-h-screen md:w-[4.25rem] md:border-r md:border-b-0 data-[open=true]:md:w-64" data-open={shownLetter ? "true" : "false"}>
+    <aside aria-label={scope.kind === "company" ? t.companies : t.personSwitch} className="sticky top-0 z-20 flex max-h-[40vh] shrink-0 flex-col border-b border-border bg-background md:h-screen md:max-h-screen md:w-[4.25rem] md:border-r md:border-b-0 data-[open=true]:md:w-64" data-open={shownLetter ? "true" : "false"}>
       <div className="flex gap-1 overflow-x-auto px-2 py-2 md:flex-1 md:flex-col md:overflow-y-auto md:px-2 md:py-4">
         {groups.map(([letter]) => {
           const selected = letter === currentLetter;
@@ -77,27 +84,24 @@ function PersonRailBody() {
           );
         })}
       </div>
-      {shownPeople.length > 0 ? (
+      {shown.length > 0 ? (
         <ul className="flex gap-2 overflow-x-auto border-t border-border px-2 py-2 md:flex-col md:overflow-visible md:border-t-0 md:px-3 md:pt-0 md:pb-4">
-          {shownPeople.map((person) => {
-            const selected = person.slug === current.slug;
-            const label = lang === "zh" ? person.nameZh : person.name;
-            const mark = avatarMark(person, lang);
-            const portrait = portraits[person.slug];
+          {shown.map((entry) => {
+            const selected = entry.slug === currentSlug;
             return (
-              <li key={person.slug}>
+              <li key={entry.slug}>
                 <button
                   type="button"
-                  onClick={() => router.push(personHome(person.slug))}
+                  onClick={() => router.push(scope.kind === "company" ? companyHome(entry.slug) : personHome(entry.slug))}
                   className={cn(
                     "flex w-full items-center gap-2 rounded-full py-1 pr-3 text-left",
                     selected ? "bg-muted" : "hover:bg-muted",
                   )}
                   aria-current={selected ? "page" : undefined}
                 >
-                  {portrait ? (
+                  {entry.portrait ? (
                     <Image
-                      src={portrait}
+                      src={entry.portrait}
                       alt=""
                       width={40}
                       height={40}
@@ -114,10 +118,10 @@ function PersonRailBody() {
                       )}
                       aria-hidden
                     >
-                      {mark}
+                      {entry.mark}
                     </span>
                   )}
-                  <span className="truncate text-sm font-semibold">{label}</span>
+                  <span className="truncate text-sm font-semibold">{entry.label}</span>
                 </button>
               </li>
             );
@@ -128,9 +132,27 @@ function PersonRailBody() {
   );
 }
 
-function avatarMark(person: Person, lang: Lang) {
-  if (lang === "zh") return [...person.nameZh.replace(/·/g, "")].slice(0, 2).join("");
-  const parts = person.name.split(/\s+/).filter(Boolean);
+function entriesFor(scope: BrowseScope, lang: Lang): RailEntry[] {
+  if (scope.kind === "company") {
+    return activeCompanies().map((company) => ({
+      slug: company.slug,
+      label: lang === "zh" ? company.nameZh : company.name,
+      letter: (lang === "zh" ? company.letter.zh : company.letter.en).toUpperCase(),
+      mark: lang === "zh" ? company.mark.zh : company.mark.en,
+    }));
+  }
+  return activePeople().map((person) => ({
+    slug: person.slug,
+    label: lang === "zh" ? person.nameZh : person.name,
+    letter: (lang === "zh" ? person.letter.zh : person.letter.en).toUpperCase(),
+    mark: avatarMark(person.name, person.nameZh, lang),
+    portrait: portraits[person.slug],
+  }));
+}
+
+function avatarMark(name: string, nameZh: string, lang: Lang) {
+  if (lang === "zh") return [...nameZh.replace(/·/g, "")].slice(0, 2).join("");
+  const parts = name.split(/\s+/).filter(Boolean);
   const first = parts[0]?.[0] ?? "";
   const last = parts.length > 1 ? parts[parts.length - 1]?.[0] ?? "" : "";
   return `${first}${last}`.toUpperCase();

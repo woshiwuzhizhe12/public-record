@@ -13,8 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Thumb, VideoCard } from "@/components/video-card";
-import { catalogueStats, personFromQuery, videosFor, type Video } from "@/data/catalogue";
-import { videoHref } from "@/lib/membership";
+import { catalogueStats, scopeFromLocation, scopeVideoHref, videosFor, videosForCompany, type Video } from "@/data/catalogue";
 import {
   countForTag,
   filterVideos,
@@ -35,8 +34,12 @@ export function ArchiveView() {
   const router = useRouter();
   const pathname = usePathname();
   const search = useSearchParams();
-  const person = personFromQuery(search.get("person"));
-  const catalogue = useMemo(() => videosFor(person.slug), [person.slug]);
+  const scope = scopeFromLocation({ person: search.get("person"), company: search.get("company") });
+  const scopeKey = scope.kind === "company" ? `company:${scope.company.slug}` : `person:${scope.person.slug}`;
+  const catalogue = useMemo(
+    () => (scope.kind === "company" ? videosForCompany(scope.company.slug) : videosFor(scope.person.slug)),
+    [scope],
+  );
   const stats = useMemo(() => catalogueStats(catalogue), [catalogue]);
 
   const qParam = search.get("q") ?? "";
@@ -93,7 +96,7 @@ export function ArchiveView() {
   const results = useMemo(() => sortVideos(filterVideos(catalogue, q, selected), sort), [catalogue, q, selected, sort]);
   useEffect(() => {
     setShown(60);
-  }, [q, selected, sort, person.slug]);
+  }, [q, selected, sort, scopeKey]);
   const showFeatured = sort === "newest" && q.trim() === "" && selected.length === 0 && results.length > 0;
   const featured = showFeatured ? results[0] : undefined;
   const grid = featured ? results.slice(1) : results;
@@ -131,10 +134,19 @@ export function ArchiveView() {
   function surprise() {
     if (results.length === 0) return;
     const pick = results[Math.floor(Math.random() * results.length)];
-    router.push(videoHref(pick.id, person.slug));
+    router.push(scopeVideoHref(pick.id, scope));
   }
 
-  const headline = person.headline[lang];
+  const headline = scope.kind === "company" ? scope.company.headline[lang] : scope.person.headline[lang];
+  const lede = scope.kind === "company" ? scope.company.lede[lang] : scope.person.lede[lang];
+  const displayName =
+    scope.kind === "company"
+      ? lang === "zh"
+        ? scope.company.nameZh
+        : scope.company.name
+      : lang === "zh"
+        ? scope.person.nameZh
+        : scope.person.name;
   const sortLabel = sort === "oldest" ? t.oldest : sort === "longest" ? t.longest : t.newest;
 
   return (
@@ -145,7 +157,7 @@ export function ArchiveView() {
           <br />
           {headline[1]}
         </h1>
-        <p className="mt-6 max-w-[46rem] text-[15px] leading-7 text-muted-foreground sm:text-base">{person.lede[lang]}</p>
+        <p className="mt-6 max-w-[46rem] text-[15px] leading-7 text-muted-foreground sm:text-base">{lede}</p>
         <p className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
           <Stat n={stats.count} label={lang === "zh" ? "条视频" : stats.count === 1 ? "video" : "videos"} />
           <Stat n={stats.hours} label={lang === "zh" ? "小时" : stats.hours === 1 ? "hour" : "hours"} />
@@ -160,7 +172,7 @@ export function ArchiveView() {
             <div className="max-w-2xl">
               <h2 className="text-2xl font-black tracking-[-0.03em]">{t.calloutTitle}</h2>
               <p className="mt-1.5 text-sm leading-6 text-muted-foreground">
-                {t.calloutBody.replaceAll("{name}", lang === "zh" ? person.nameZh : person.name)}
+                {t.calloutBody.replaceAll("{name}", displayName)}
               </p>
             </div>
             <Link
@@ -266,7 +278,7 @@ export function ArchiveView() {
       </div>
 
       <div className="mx-auto max-w-[1120px] px-5 py-7 sm:px-8">
-        {featured ? <Featured video={featured} person={person.slug} /> : null}
+        {featured ? <Featured video={featured} href={scopeVideoHref(featured.id, scope)} /> : null}
         {filtering ? (
           <div className="mb-6 flex flex-wrap items-center gap-2" aria-live="polite">
             <span className="mr-1 text-lg font-semibold">{t.videosCount(results.length)}</span>
@@ -310,7 +322,12 @@ export function ArchiveView() {
         ) : (
           <div className={cn("grid grid-cols-1 gap-x-5 gap-y-9 md:grid-cols-2 min-[1100px]:grid-cols-3", featured && "mt-10")}>
             {grid.slice(0, shown).map((video) => (
-              <VideoCard key={video.id} video={video} person={person.slug} />
+              <VideoCard
+                key={video.id}
+                video={video}
+                person={scope.kind === "person" ? scope.person.slug : undefined}
+                company={scope.kind === "company" ? scope.company.slug : undefined}
+              />
             ))}
           </div>
         )}
@@ -334,11 +351,11 @@ function Stat({ n, label }: { n: number; label: string }) {
   );
 }
 
-function Featured({ video, person }: { video: Video; person: string }) {
+function Featured({ video, href }: { video: Video; href: string }) {
   const { lang, t } = useI18n();
   const kind = t.formats[video.format] ?? video.format;
   return (
-    <Link href={videoHref(video.id, person)} className="group grid items-center gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
+    <Link href={href} className="group grid items-center gap-5 lg:grid-cols-[1.15fr_0.85fr] lg:gap-8">
       <div className="relative aspect-video overflow-hidden rounded-xl bg-muted">
         <Thumb key={video.id} id={video.id} className="h-full w-full object-cover" />
         <span className="absolute top-1/2 left-1/2 grid size-16 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white/95 text-black shadow-lg">

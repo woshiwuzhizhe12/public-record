@@ -1,7 +1,8 @@
 import raw from "./catalogue.json";
+import { companies, companyBySlug, companySearchAliases, type Company } from "@/data/companies";
 import { periodId } from "@/lib/format";
 import type { Filterable } from "@/lib/filter";
-import { videoPeople } from "@/lib/membership";
+import { videoHref, videoPeople } from "@/lib/membership";
 
 export type Chapter = { start: number; title: string };
 export type DateKind = "stream" | "upload" | "event";
@@ -30,6 +31,7 @@ export type Person = {
 export type Video = Filterable & {
   person: string;
   people: string[];
+  companies: string[];
   channelUrl: string;
   platform: "youtube";
   uploadDate: string;
@@ -48,6 +50,7 @@ export type Video = Filterable & {
 type RawVideo = (typeof raw.videos)[number] & {
   bilibili?: BilibiliSource | null;
   people?: string[];
+  companies?: string[];
 };
 
 const JRE_ALIASES = ["乔·罗根", "乔罗根", "Joe Rogan", "Rogan", "PowerfulJRE", "JRE"];
@@ -77,16 +80,19 @@ function decorate(entry: RawVideo): Video {
   ];
   const isJre = entry.channel === "PowerfulJRE" || /joe rogan experience/i.test(entry.title);
   const peopleOnVideo = videoPeople(entry);
+  const companySlugs = (entry.companies ?? []).filter((slug) => companyBySlug(slug));
   const extraSearch = [
     ...(isJre ? JRE_ALIASES : []),
     ...(peopleOnVideo.includes("steve-jobs") ? ["乔布斯", "Steve Jobs"] : []),
     ...(peopleOnVideo.includes("lisa-su") ? ["苏姿丰", "苏资丰", "Lisa Su"] : []),
+    ...companySlugs.flatMap((slug) => companySearchAliases[slug] ?? []),
     ...(bilibili ? [bilibili.title, bilibili.channel, ...bilibili.chapters.map((chapter) => chapter.title)] : []),
   ];
   return {
     id: entry.id,
     person: entry.person,
     people: peopleOnVideo,
+    companies: companySlugs,
     title: entry.title,
     channel: entry.channel,
     channelUrl: entry.channelUrl,
@@ -136,6 +142,76 @@ export function personTimeline(slug: string): string {
   return `/timeline?person=${encodeURIComponent(slug)}`;
 }
 
+export function activeCompanies(): Company[] {
+  return companies;
+}
+
+export function companyFromQuery(value: string | null | undefined): Company | undefined {
+  return companyBySlug(value);
+}
+
+export function companyHome(slug: string): string {
+  return `/?company=${encodeURIComponent(slug)}`;
+}
+
+export function companyTimeline(slug: string): string {
+  return `/timeline?company=${encodeURIComponent(slug)}`;
+}
+
+export type BrowseScope =
+  | { kind: "person"; person: Person }
+  | { kind: "company"; company: Company };
+
+export function scopeFromLocation(input: {
+  person: string | null;
+  company: string | null;
+  video?: Video;
+}): BrowseScope {
+  const company = companyFromQuery(input.company);
+  if (company && (!input.video || input.video.companies.includes(company.slug))) {
+    return { kind: "company", company };
+  }
+  if (input.video && !people.some((person) => person.slug === input.video?.person)) {
+    const fallback = companyFromQuery(input.video.companies[0]);
+    if (fallback) return { kind: "company", company: fallback };
+  }
+  const requested = input.person;
+  const slug = input.video
+    ? requested && input.video.people.includes(requested)
+      ? requested
+      : input.video.person
+    : requested;
+  return { kind: "person", person: personFromQuery(slug) };
+}
+
+export function scopeHome(scope: BrowseScope): string {
+  return scope.kind === "company" ? companyHome(scope.company.slug) : personHome(scope.person.slug);
+}
+
+export function scopeTimeline(scope: BrowseScope): string {
+  return scope.kind === "company" ? companyTimeline(scope.company.slug) : personTimeline(scope.person.slug);
+}
+
+export function scopeVideoHref(id: string, scope: BrowseScope): string {
+  return scope.kind === "company" ? videoHref(id, { company: scope.company.slug }) : videoHref(id, scope.person.slug);
+}
+
+export function switchScopeHref(to: "person" | "company", current: BrowseScope, video?: Video): string {
+  if (to === "company") {
+    const slug = current.kind === "company" ? current.company.slug : (video?.companies[0] ?? "spacex");
+    if (video && video.companies.includes(slug)) return videoHref(video.id, { company: slug });
+    return companyHome(slug);
+  }
+  const slug =
+    current.kind === "person"
+      ? current.person.slug
+      : video && people.some((person) => person.slug === video.person)
+        ? video.person
+        : defaultPerson().slug;
+  if (video && video.people.includes(slug)) return videoHref(video.id, slug);
+  return personHome(slug);
+}
+
 export function activePerson(): Person {
   return defaultPerson();
 }
@@ -144,14 +220,22 @@ export function videosFor(personSlug: string): Video[] {
   return videos.filter((video) => video.people.includes(personSlug));
 }
 
+export function videosForCompany(companySlug: string): Video[] {
+  return videos.filter((video) => video.companies.includes(companySlug));
+}
+
 export function getVideo(id: string): Video | undefined {
   return videos.find((video) => video.id === id);
 }
 
-export function relatedVideos(video: Video, limit = 3, contextSlug?: string): Video[] {
-  const scope = contextSlug && video.people.includes(contextSlug) ? contextSlug : video.person;
+export function relatedVideos(video: Video, limit = 3, contextSlug?: string, companySlug?: string): Video[] {
+  const personScope = contextSlug && video.people.includes(contextSlug) ? contextSlug : video.person;
   return videos
-    .filter((candidate) => candidate.id !== video.id && candidate.people.includes(scope))
+    .filter((candidate) => {
+      if (candidate.id === video.id) return false;
+      if (companySlug) return candidate.companies.includes(companySlug);
+      return Boolean(personScope) && candidate.people.includes(personScope);
+    })
     .map((candidate) => ({
       candidate,
       score:

@@ -7,12 +7,15 @@ import { formatDate, formatDuration } from "@/lib/format";
 import { useI18n } from "@/lib/i18n";
 import type { Video } from "@/data/catalogue";
 
-export function VideoCard({ video, person }: { video: Video; person?: string }) {
+export function VideoCard({ video, person, company }: { video: Video; person?: string; company?: string }) {
   const { lang, t } = useI18n();
   const date = `${video.dateApproximate ? "≈ " : ""}${formatDate(video.date, lang)}`;
-  const file = person && video.people.includes(person) ? person : video.person;
+  const href =
+    company && video.companies.includes(company)
+      ? videoHref(video.id, { company })
+      : videoHref(video.id, person && video.people.includes(person) ? person : video.person);
   return (
-    <Link href={videoHref(video.id, file)} className="group block focus-visible:outline-none">
+    <Link href={href} className="group block focus-visible:outline-none">
       <div className="relative aspect-video overflow-hidden rounded-lg bg-muted">
         <Thumb key={video.id} id={video.id} className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]" />
         <span className="absolute top-2 left-2 rounded bg-white/95 px-1.5 py-0.5 text-[11px] font-semibold text-black">

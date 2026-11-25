@@ -76,7 +76,7 @@ export const TOPIC_ORDER = [
   "amd",
 ];
 
-export const FORMAT_ORDER = ["interview", "podcast", "conference", "keynote", "earnings", "white-house", "tv"];
+export const FORMAT_ORDER = ["interview", "podcast", "conference", "keynote", "launch", "earnings", "white-house", "tv"];
 
 export const PERIOD_ORDER = ["1980-1994", "1995-2009", "2010-2014", "2015-2019", "2020-2022", "2023", "2024", "2025", "2026"];
 
