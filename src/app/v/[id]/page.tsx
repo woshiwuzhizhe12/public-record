@@ -13,7 +13,7 @@ export function generateStaticParams(): Params[] {
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
   const { id } = await params;
   const video = getVideo(id);
-  if (!video) return { title: "Public Record" };
+  if (!video) return { title: "不破不立" };
   return {
     title: video.title,
     description: `${video.channel} · YouTube`,

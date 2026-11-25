@@ -7,7 +7,7 @@ export type Lang = "en" | "zh";
 
 const copy = {
   en: {
-    wordmark: "Public Record",
+    wordmark: "不破不立",
     unofficial: "Unofficial",
     videos: "Videos",
     personSwitch: "Person",
@@ -68,7 +68,7 @@ const copy = {
     latest: "Latest",
     calloutTitle: "An unofficial file",
     calloutBody:
-      "Public Record is not affiliated with {name} or with the channels in this list. It is a viewing index: searchable, dated, and attributed. The files themselves stay with their owners.",
+      "不破不立 is not affiliated with {name} or with the channels in this list. It is a viewing index: searchable, dated, and attributed. The files themselves stay with their owners.",
     calloutAction: "How this file is built",
     footer: "Unofficial file. Videos belong to their respective owners.",
     footerExtra: "Not affiliated with the people in these files, or with the channels listed.",
@@ -113,7 +113,7 @@ const copy = {
     } as Record<string, string>,
     aboutTitle: "About",
     aboutIntro:
-      "Public Record is an unofficial index of public appearances. The open files follow Elon Musk, Jensen Huang, Joe Rogan, Steve Jobs, and Lisa Su. Rogan's file is the full-length Joe Rogan Experience and JRE MMA shows posted on his official YouTube channel. Episodes with Musk or Huang also stay on the guest's file.",
+      "不破不立 is an unofficial index of public appearances. The open files follow Elon Musk, Jensen Huang, Joe Rogan, Steve Jobs, and Lisa Su. Rogan's file is the full-length Joe Rogan Experience and JRE MMA shows posted on his official YouTube channel. Episodes with Musk or Huang also stay on the guest's file.",
     aboutSections: [
       {
         title: "How it is built",
@@ -149,7 +149,7 @@ const copy = {
     ],
   },
   zh: {
-    wordmark: "公开记录",
+    wordmark: "不破不立",
     unofficial: "非官方",
     videos: "视频",
     personSwitch: "人物",
@@ -209,7 +209,7 @@ const copy = {
     latest: "最新",
     calloutTitle: "一份非官方档案",
     calloutBody:
-      "公开记录与{name}以及名单里的频道都没有关联。这是一份可检索、标明日期和出处的观看索引。影像文件仍归各自权利人所有。",
+      "不破不立与{name}以及名单里的频道都没有关联。这是一份可检索、标明日期和出处的观看索引。影像文件仍归各自权利人所有。",
     calloutAction: "这份档案如何做成",
     footer: "非官方档案。视频版权归各自权利人所有。",
     footerExtra: "与档案中的人物及所列频道均无关联。",
@@ -254,7 +254,7 @@ const copy = {
     } as Record<string, string>,
     aboutTitle: "关于",
     aboutIntro:
-      "公开记录是一份非官方的公开出场索引。目前的档案跟随埃隆·马斯克、黄仁勋、乔·罗根、乔布斯和苏姿丰。乔·罗根这份收录他官方 YouTube 频道上的完整 Joe Rogan Experience 和 JRE MMA 节目。与马斯克或黄仁勋的那几期，也仍留在嘉宾自己的档案里。",
+      "不破不立是一份非官方的公开出场索引。目前的档案跟随埃隆·马斯克、黄仁勋、乔·罗根、乔布斯和苏姿丰。乔·罗根这份收录他官方 YouTube 频道上的完整 Joe Rogan Experience 和 JRE MMA 节目。与马斯克或黄仁勋的那几期，也仍留在嘉宾自己的档案里。",
     aboutSections: [
       {
         title: "如何做成",

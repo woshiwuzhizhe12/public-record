@@ -16,8 +16,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Public Record 公开记录",
-    template: "%s — Public Record",
+    default: "不破不立",
+    template: "%s — 不破不立",
   },
   description:
     "An unofficial index of public appearances. Videos play from the channels that published them.",

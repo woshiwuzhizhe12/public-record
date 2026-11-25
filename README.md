@@ -1,4 +1,4 @@
-# Public Record 公开记录
+# 不破不立
 
 An unofficial index of public appearances. The first file follows Elon Musk: interviews, keynotes, shareholder meetings, podcasts and press conferences. Videos play from the YouTube channels that published them. This site does not re-host video files.
 
@@ -65,4 +65,4 @@ Next.js, React, TypeScript, Tailwind CSS, and shadcn/ui primitives (button, inpu
 
 ## Visual check
 
-Compared with the reference archive, this build keeps the same reading order: wordmark and nav that scroll away, a two-line hero, a stat row, a coral-edged note, a sticky search row, filters that open underneath, a large latest card, then a three-column list that becomes one column on a narrow screen. Detail pages have a back link, a wide player, timestamped rows and a side column. Branding is different on purpose: the name is Public Record / 公开记录, the headline is “Elon Musk, the open file.”, and there is no donation button.
+Compared with the reference archive, this build keeps the same reading order: wordmark and nav that scroll away, a two-line hero, a stat row, a coral-edged note, a sticky search row, filters that open underneath, a large latest card, then a three-column list that becomes one column on a narrow screen. Detail pages have a back link, a wide player, timestamped rows and a side column. Branding is different on purpose: the name is 不破不立, the headline is “Elon Musk, the open file.”, and there is no donation button.
